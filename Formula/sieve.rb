@@ -5,21 +5,21 @@
 class Sieve < Formula
   desc "Blazing-fast, multi-platform JSON log viewer for your terminal"
   homepage "https://github.com/ersisk/sieve"
-  version "1.0.1"
+  version "1.0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.1/sieve_1.0.1_darwin_amd64.tar.gz"
-      sha256 "000ae94a11717518497948879c3fb92cfbf15098ac7a7c8bd97d0a0445fec6b6"
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_darwin_amd64.tar.gz"
+      sha256 "1808f0c689bfc39ce591b9f4684b63fb0be9d420601075bd1afe50016de66dc0"
 
       def install
         bin.install "sieve"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.1/sieve_1.0.1_darwin_arm64.tar.gz"
-      sha256 "bad38c523b098d1e3989b419687bf625c345e0fe72ced96384c0081199c23781"
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_darwin_arm64.tar.gz"
+      sha256 "2fe974c806a1c59b8b89d679573c54c428c9d843bdb63989edccf99557e41234"
 
       def install
         bin.install "sieve"
@@ -29,15 +29,15 @@ class Sieve < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.1/sieve_1.0.1_linux_amd64.tar.gz"
-      sha256 "8749005eb446f6d674c5f5e3bad1bf7cff6b8e8fcef943d8fc3c3472f9a2d2f1"
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_linux_amd64.tar.gz"
+      sha256 "45f6377f13f2ba90b6fd54e0cd215a3d696267706e38a13ce51ac81720b3e625"
       def install
         bin.install "sieve"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.1/sieve_1.0.1_linux_arm64.tar.gz"
-      sha256 "1534f87798d345960679569402c11e8076d0c5d89e94617bf91489d4e0f7bcf6"
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_linux_arm64.tar.gz"
+      sha256 "80e58f23509d773bcf92f50a29229ce78237de20c12e7250bb87e2ae81c42187"
       def install
         bin.install "sieve"
       end
