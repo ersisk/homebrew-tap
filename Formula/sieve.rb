@@ -5,23 +5,23 @@
 class Sieve < Formula
   desc "Blazing-fast, multi-platform JSON log viewer for your terminal"
   homepage "https://github.com/ersisk/sieve"
-  version "1.0.2"
+  version "1.0.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_darwin_amd64.tar.gz"
-      sha256 "1808f0c689bfc39ce591b9f4684b63fb0be9d420601075bd1afe50016de66dc0"
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.3/sieve_1.0.3_darwin_amd64.tar.gz"
+      sha256 "3378a491e208c2ca4135bcbdf27db8eb540841f60209ebad4ed6f3817cf0889d"
 
-      def install
+      define_method(:install) do
         bin.install "sieve"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_darwin_arm64.tar.gz"
-      sha256 "2fe974c806a1c59b8b89d679573c54c428c9d843bdb63989edccf99557e41234"
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.3/sieve_1.0.3_darwin_arm64.tar.gz"
+      sha256 "eed1c5673d683f9593478e3cba5b670c9b76ffd7a4879d8e4e413fe79c086310"
 
-      def install
+      define_method(:install) do
         bin.install "sieve"
       end
     end
@@ -29,16 +29,16 @@ class Sieve < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_linux_amd64.tar.gz"
-      sha256 "45f6377f13f2ba90b6fd54e0cd215a3d696267706e38a13ce51ac81720b3e625"
-      def install
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.3/sieve_1.0.3_linux_amd64.tar.gz"
+      sha256 "7cc3c26c02e19f0bd107036d8f3627f7d132bae7ba3cc9cba8885ad8de01497f"
+      define_method(:install) do
         bin.install "sieve"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ersisk/sieve/releases/download/v1.0.2/sieve_1.0.2_linux_arm64.tar.gz"
-      sha256 "80e58f23509d773bcf92f50a29229ce78237de20c12e7250bb87e2ae81c42187"
-      def install
+      url "https://github.com/ersisk/sieve/releases/download/v1.0.3/sieve_1.0.3_linux_arm64.tar.gz"
+      sha256 "74a37b55519988f420b8cc7c1bf21995840356df8da861ac774773f72890a1fa"
+      define_method(:install) do
         bin.install "sieve"
       end
     end
